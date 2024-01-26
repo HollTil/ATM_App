@@ -19,7 +19,14 @@ public class Account {
         //TODO: verificate 4 digits
     }
 
+    public Account(String customerName, int accountNumber, int pin, double accountValue) {
+        this.customerName = customerName;
+        this.accountNumber = accountNumber;
+        this.pin = pin;
+        this.accountValue = accountValue;
 
+        this.state = true;
+    }
 
 //GETTER
 
@@ -73,5 +80,15 @@ public class Account {
         this.tranactionLog = tranactionLog;
     }
 
-
+    @Override
+    public String toString() {
+        return "Account{" +
+                "customerName='" + customerName + '\'' +
+                ", accountNumber=" + accountNumber +
+                ", pin=" + pin +
+                ", accountValue=" + accountValue +
+                ", state=" + state +
+                ", tranactionLog='" + tranactionLog + '\'' +
+                '}';
+    }
 }

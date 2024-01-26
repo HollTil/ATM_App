@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbe4ac0f-afdd-4c0b-9548-32dd4328b67d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="dbe4ac0f-afdd-4c0b-9548-32dd4328b67d" name="Changes" comment="set activity diagram">
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/srh/holtil/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/srh/holtil/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/srh/holtil/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/srh/holtil/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/srh/holtil/TEST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/srh/holtil/TEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/srh/holtil/database/inMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/srh/holtil/database/InMemoryDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tilles\IdeaProjects\ATM_App\src\main\resources\diagrams" />
       <recent name="C:\Users\Tilles\IdeaProjects\ATM_App\src\main\resources" />
     </key>
   </component>
@@ -87,6 +90,19 @@
       <option name="presentableId" value="Default" />
       <updated>1706098990497</updated>
     </task>
+    <task id="LOCAL-00001" summary="set activity diagram">
+      <option name="closed" value="true" />
+      <created>1706260376785</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706260376786</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set activity diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="set activity diagram" />
   </component>
 </project>
