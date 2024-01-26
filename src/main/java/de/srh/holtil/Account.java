@@ -12,13 +12,14 @@ public class Account {
     private String tranactionLog;
 
 
-    public void verifyAcc_number(){
-        //TODO: verification if is unique and exact 9 digits
+    public boolean verifyAcc_number(){
+        //TODO: verification if is unique, exists and has 9 digits
     }
-    public void verifyAcc_pin(){
-        //TODO: verificate 4 digits
+    public boolean verifyAcc_pin(){
+        //TODO: verification if has 4 digits and matches with accountNumber
     }
 
+//Constructor for Account:
     public Account(String customerName, int accountNumber, int pin, double accountValue) {
         this.customerName = customerName;
         this.accountNumber = accountNumber;
@@ -28,8 +29,7 @@ public class Account {
         this.state = true;
     }
 
-//GETTER
-
+//GETTER:
     public String getCustomerName() {
         return customerName;
     }
@@ -54,8 +54,7 @@ public class Account {
         return tranactionLog;
     }
 
-//SETTER
-
+//SETTER:
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
@@ -80,6 +79,7 @@ public class Account {
         this.tranactionLog = tranactionLog;
     }
 
+//toString method for print DB in console:
     @Override
     public String toString() {
         return "Account{" +
