@@ -14,6 +14,8 @@ public class Account {
 
     public boolean verifyAcc_number(){
         //TODO: verification if is unique, exists and has 9 digits
+        accountNumber.
+
     }
     public boolean verifyAcc_pin(){
         //TODO: verification if has 4 digits and matches with accountNumber

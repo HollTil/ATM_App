@@ -9,13 +9,13 @@ public class LoginInterface {
         System.out.println("Bitte Account-Nummer angeben:");
         int accountNumber = scanner.nextInt();
 
-//TODO: accountNumber has 9 digits and exists in userDB:
+        //TODO: accountNumber has 9 digits and exists in userDB:
         if(verifyAcc_number = true){
             System.out.println("Bitte PIN angeben: ");
             int PIN = scanner.nextInt();
-//TODO: PIN has 4 digits and is correct:
-            if(){
-              //TODO: connect to account
+            //TODO: PIN has 4 digits and is correct:
+            if(verifyAcc_pin = true){
+                //TODO: connect to account
             }
         }
         else
