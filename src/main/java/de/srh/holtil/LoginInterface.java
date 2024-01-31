@@ -10,7 +10,8 @@ public class LoginInterface {
         int accountNumber = scanner.nextInt();
 
         //TODO: accountNumber has 9 digits and exists in userDB:
-        if(verifyAcc_number = true){
+
+        if(Account.verifyAcc_number == true){
             System.out.println("Bitte PIN angeben: ");
             int PIN = scanner.nextInt();
             //TODO: PIN has 4 digits and is correct:

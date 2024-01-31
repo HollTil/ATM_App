@@ -1,5 +1,7 @@
 package de.srh.holtil;
 
+import de.srh.holtil.database.InMemoryDB;
+
 import java.util.Scanner;
 
 public class UserInterface {
@@ -8,7 +10,7 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
 
         //Welcome message:
-        System.out.println("Welcome to your ATM-Account " + get.customerName);
+        System.out.println("Welcome to your ATM-Account "); // + customerName
         System.out.println("---   ---   ---   ---   ---   ---   ---   ---");
         //give options to select:
         System.out.println("Please select an option: ");
@@ -19,6 +21,6 @@ public class UserInterface {
         System.out.println("Print account state");
         System.out.println("Logout");
 
-        scanner = Scanner.nextLine();
+        scanner = Scanner.nextLine(System.in);
     }
 }

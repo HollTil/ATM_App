@@ -1,34 +1,44 @@
 package de.srh.holtil;
 
+import java.util.ArrayList;
+
 public class Account {
 
 //Attributes
     private String customerName;
     private int accountNumber;
-    private int pin;
+    private String pin;
     private double accountValue;
-    private boolean state;
+    private AccountState state;
 
-    private String tranactionLog;
+    private ArrayList<TransactionLog> transactionLog;
+    private int loginFailureCounter;
 
 
-    public boolean verifyAcc_number(){
-        //TODO: verification if is unique, exists and has 9 digits
-        accountNumber.
-
+/**    public boolean verifyAcc_number(){
+        //verification if account_number has 9 digits
+        int length = String.valueOf(accountNumber).length();
+        if(length == 9){
+            return true;
+        }else{
+            return false;
+        }
     }
     public boolean verifyAcc_pin(){
-        //TODO: verification if has 4 digits and matches with accountNumber
+        //TODO: verification if account_pin has 4 digits
+        int pinLength = String.valueOf(accountNumber).length();
+        if(pinLength == 4){
+            return true;
+        }else{
+            return false;
+        }
     }
-
+**/
 //Constructor for Account:
-    public Account(String customerName, int accountNumber, int pin, double accountValue) {
+    public Account(String customerName, int accountNumber, String pin) {
         this.customerName = customerName;
         this.accountNumber = accountNumber;
         this.pin = pin;
-        this.accountValue = accountValue;
-
-        this.state = true;
     }
 
 //GETTER:
@@ -40,7 +50,7 @@ public class Account {
         return accountNumber;
     }
 
-    public int getPin() {
+    public String getPin() {
         return pin;
     }
 
@@ -48,38 +58,37 @@ public class Account {
         return accountValue;
     }
 
-    public boolean isState() {
+    public AccountState isState() {
         return state;
     }
 
-    public String getTranactionLog() {
-        return tranactionLog;
+    public ArrayList<TransactionLog> getTransactionLog() {
+        return transactionLog;
     }
 
-//SETTER:
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public int getLoginFailureCounter(){
+        return loginFailureCounter;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public void deposit(int depositAmount){
+        double newAccountValue = getAccountValue() + depositAmount;
     }
 
-    public void setPin(int pin) {
-        this.pin = pin;
+    public void withdraw(int withdrawAmount){
+        double newAccountValue = getAccountValue() - withdrawAmount;
     }
 
-    public void setAccountValue(double accountValue) {
-        this.accountValue = accountValue;
+    public void updateFailureLoginCounter(){
+        if (loginFailureCounter >= 3){
+            AccountState.state blocked = AccountState.state.blocked;
+            System.out.println("Zu viele fehlerhafte Login versuche - der Account wurde gesperrt.");
+            System.out.println("Bitte kontaktieren Sie einen Mitarbeiter.");
+        }
     }
 
-    public void setState(boolean state) {
-        this.state = state;
-    }
 
-    public void setTranactionLog(String tranactionLog) {
-        this.tranactionLog = tranactionLog;
-    }
+
+
 
 //toString method for print DB in console:
     @Override
@@ -90,7 +99,7 @@ public class Account {
                 ", pin=" + pin +
                 ", accountValue=" + accountValue +
                 ", state=" + state +
-                ", tranactionLog='" + tranactionLog + '\'' +
+                ", tranactionLog='" + transactionLog + '\'' +
                 '}';
     }
 }
