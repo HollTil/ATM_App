@@ -12,11 +12,19 @@ public class TransactionLog {
     private double postBalance;
 
 
-
+//constructor for TransactionLog:
     public void TransactionLog(String protocol, TransactionType transactionType, double transactionAmount, String location, String atmID){
-
+        this.timestamp = timestamp;
+        this.protocol = protocol;
+        this.transactionType = transactionType;
+        this.transactionAmount = transactionAmount;
+        this.location = location;
+        this.atmID = atmID;
+        this.postBalance = postBalance;
     }
 
+
+// Getter:
     public DateTimeException getTimestamp() {
         return timestamp;
     }
