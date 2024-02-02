@@ -1,9 +1,7 @@
 package de.srh.holtil;
 
-public class AccountState {
-    public enum state{
+public enum AccountState {
         active,
         blocked,
         inactive
-    }
 }

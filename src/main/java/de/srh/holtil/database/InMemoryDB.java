@@ -12,7 +12,7 @@ public class InMemoryDB {
     public List<Account> getAccountList() {
         return accountList;
     }
-
+/**
     //neue Accounts in accountList einfügen:
     public InMemoryDB() {
         accountList.add(new Account("Tilles", 1111111111, 1111, 500));
@@ -20,4 +20,5 @@ public class InMemoryDB {
         accountList.add(new Account("Dittsche", 333333333, 3333, 55_000));
         accountList.add(new Account("JAYJAY", 444444444, 4444, 500_000));
     }
+ **/
 }

@@ -1,9 +1,9 @@
 package de.srh.holtil;
 
-import java.time.DateTimeException;
+import java.util.Date;
 
 public class TransactionLog {
-    private DateTimeException timestamp;
+    private Date timestamp;
     private String protocol;
     private TransactionType transactionType;
     private double transactionAmount;
@@ -13,8 +13,8 @@ public class TransactionLog {
 
 
 //constructor for TransactionLog:
-    public void TransactionLog(String protocol, TransactionType transactionType, double transactionAmount, String location, String atmID){
-        this.timestamp = timestamp;
+    public TransactionLog(String protocol, TransactionType transactionType, double transactionAmount, String location, String atmID, double postBalance){
+        this.timestamp = generateTimestamp();
         this.protocol = protocol;
         this.transactionType = transactionType;
         this.transactionAmount = transactionAmount;
@@ -23,9 +23,12 @@ public class TransactionLog {
         this.postBalance = postBalance;
     }
 
+    private Date generateTimestamp(){
+        return new Date();
+    }
 
 // Getter:
-    public DateTimeException getTimestamp() {
+    public Date getTimestamp() {
         return timestamp;
     }
 
@@ -51,5 +54,18 @@ public class TransactionLog {
 
     public double getPostBalance() {
         return postBalance;
+    }
+
+    @Override
+    public String toString() {
+        return "TransactionLog{" +
+                "timestamp=" + timestamp +
+                ", protocol='" + protocol + '\'' +
+                ", transactionType=" + transactionType +
+                ", transactionAmount=" + transactionAmount +
+                ", location='" + location + '\'' +
+                ", atmID='" + atmID + '\'' +
+                ", postBalance=" + postBalance +
+                '}';
     }
 }

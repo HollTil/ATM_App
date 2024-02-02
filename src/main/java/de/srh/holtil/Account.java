@@ -39,11 +39,12 @@ public class Account {
         this.customerName = customerName;
         this.accountNumber = accountNumber;
         this.pin = pin;
+        this.state = AccountState.active;
     }
 
 //GETTER:
     public String getCustomerName() {
-        return customerName;
+        return this.customerName;
     }
 
     public int getAccountNumber() {
@@ -79,16 +80,14 @@ public class Account {
     }
 
     public void updateFailureLoginCounter(){
+        loginFailureCounter++;
         if (loginFailureCounter >= 3){
-            AccountState.state blocked = AccountState.state.blocked;
+            this.state = AccountState.blocked;
             System.out.println("Zu viele fehlerhafte Login versuche - der Account wurde gesperrt.");
             System.out.println("Bitte kontaktieren Sie einen Mitarbeiter.");
         }
+
     }
-
-
-
-
 
 //toString method for print DB in console:
     @Override

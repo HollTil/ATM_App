@@ -3,7 +3,7 @@ package de.srh.holtil;
 import de.srh.holtil.database.InMemoryDB;
 
 import java.util.Scanner;
-
+/**
 public class UserInterface {
 //TODO: Welcome message; selectable options
     public static void welcome(){
@@ -24,3 +24,4 @@ public class UserInterface {
         scanner = Scanner.nextLine(System.in);
     }
 }
+**/

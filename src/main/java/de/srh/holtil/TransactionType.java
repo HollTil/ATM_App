@@ -1,8 +1,6 @@
 package de.srh.holtil;
 
-public class TransactionType {
-    public enum transactionType{
-        withdraw,
-        deposit
-    }
+public enum TransactionType {
+        WITHDRAW,
+        DEPOSIT
 }

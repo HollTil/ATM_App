@@ -2,7 +2,7 @@ package de.srh.holtil;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
-
+/**
 public class LoginInterface {
     public static void login(){
         Scanner scanner = new Scanner(System.in);
@@ -23,3 +23,4 @@ public class LoginInterface {
         System.out.println("Account-Nummer ist fehlerhaft oder nicht vorhanden");
     }
 }
+**/
